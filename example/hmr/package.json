@@ -2,7 +2,7 @@
   "name": "browserify-hmr-example",
   "dependencies": {
     "browserify-hmr": "^0.3.6",
-    "ecstatic": "^3.1.1",
+    "ecstatic": "^4.1.4",
     "watchify": "^3.9.0"
   },
   "scripts": {
