@@ -3,12 +3,16 @@
   "dependencies": {
     "browserify-hmr": "^0.3.6",
     "ecstatic": "^3.1.1",
-    "watchify": "^3.9.0"
+    "watchify": "^3.9.0",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "watch": "watchify -p browserify-hmr main.js -o public/bundle.js -dv",
     "build": "browserify main.js > public/bundle.js",
     "www": "ecstatic -p 8000 public",
-    "start": "npm run www & npm run watch"
-  }
+    "start": "npm run www & npm run watch",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
